@@ -1,6 +1,6 @@
 import React from 'react'
 import { useThemeContext } from '../context/context-global';
-
+import { drupal } from '../lib/drupal'
 
 export default async function Dasboard() {
 
