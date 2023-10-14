@@ -1,5 +1,5 @@
 import Header from './components/header'
-import { GlobalProvider, ThemeContextProvider } from './context/context-global'
+import {  ThemeContextProvider } from './context/context-global'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
