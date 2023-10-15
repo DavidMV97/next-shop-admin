@@ -8,6 +8,9 @@ module.exports = {
       translate: {
         '-50': '-50%',
       },
+      fontFamily: {
+        sans: ["var(--font-opensans)"],
+      }
     },
     colors: {
       green: {

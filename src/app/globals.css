@@ -2,3 +2,143 @@
 @tailwind components;
 @tailwind utilities;
 
+
+h1,h2,h3{
+    @apply text-green-dark font-bold;
+}
+
+/*Background banner servicios */
+.banner-servicios-home::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.309);
+}
+
+/*Background bloque areas home*/
+
+.block-areas-home::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right,rgba(0, 81, 85, 0.5), rgba(0, 81, 85, 1));
+
+}
+
+
+/* arrow bloque areas home */
+.arrow-areas::after{
+    content: '';
+    display: block;
+    background: url(./images/arrow.png) no-repeat center;
+    width: 40px;
+    height: 40px;
+    
+}
+
+/*  background banner seccion servicios*/
+.soft-green::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #00515580;
+}
+
+
+.block-footer p{
+    margin-bottom: 10px;
+}
+
+.shadow-article{
+    box-shadow: 0px 0px 14px 0px rgba(51, 51, 51, 0.25);
+}
+
+.visible.building{
+    background: #14A39E;
+}
+
+.show-shadow::after{
+    content: '';
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.309);
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.items-menu{
+    right: 100%;
+    transition: all 0.3s ease;
+}
+
+.items-menu.show{
+    display: flex !important;
+    right: 0;
+}
+
+.button-menu{
+    display: block;
+    background: url(./images/burger.png) no-repeat center;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    right: 0;
+    transition: right 0.3s ease;
+}
+
+.button-menu.open{
+    background: url(./images/close.png) no-repeat center;
+    position: fixed;
+    right: 384px;
+    top: 0;
+    z-index: 10;
+    width: 82px;
+    height: 82px;
+}
+
+.container-iframe iframe{
+    min-height: 208px;
+}
+
+.container-page .container-iframe iframe,
+.container-page > img{
+    height: 741px;
+}
+
+.paragraph-banner:has(+ .container-page) {
+    display: none;
+}
+
+@media(max-width: 768px){
+    .container-page .container-iframe iframe,
+    .container-page > img{
+        height: 250px;
+    }
+    .button-menu.open{
+        right: 0
+    }
+
+    .show-shadow::after{
+        content: none;
+    }
+}
+
+@media(max-width: 1140px){
+    .container-page .container-iframe iframe,
+    .container-page > img{
+        height: 387px;
+    }
+    
+    .block-areas-home::before{
+        background-image: linear-gradient(to bottom, rgba(0, 81, 85, 0.8), rgba(0, 81, 85, 1));
+
+    }
+}

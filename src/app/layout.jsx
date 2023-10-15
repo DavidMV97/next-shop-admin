@@ -1,9 +1,15 @@
+import Footer from './components/footer'
 import Header from './components/header'
-import {  ThemeContextProvider } from './context/context-global'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Open_Sans } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-opensans',
+})
+
 
 export const metadata = {
   title: 'Servicios grupo éxito'
@@ -11,12 +17,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <ThemeContextProvider>
-          <Header />
-          {children}
-        </ThemeContextProvider>
+    <html
+      lang="en"
+      className={`${openSans.variable} font-sans`}
+    >
+      <body className='font-sans'>
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   )

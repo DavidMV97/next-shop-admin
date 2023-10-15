@@ -9,27 +9,19 @@ import Link from 'next/link';
 
 export default function LogoHeader({ logo }) {
 
-    const { brand, setBrand } = useThemeContext();
-
-    setBrand(logo);
-
-    //console.log(brand[0].field_block_imagen?.uri?.url);
-
-    console.log(absoluteUrl(brand[0].field_block_imagen?.uri?.url));
-
     return (
         <div>
             {
-                brand?.length ? (
+                logo?.length ? (
                     <figure>
                         <Link href='/'>
-                            {brand[0].field_block_imagen?.uri?.url && (
+                            {logo[0].field_block_imagen?.uri?.url && (
                                 <Image className='w-[108px] h-[60px] object-cover'
-                                    src={absoluteUrl(brand[0].field_block_imagen?.uri?.url)}
+                                    src={absoluteUrl(logo[0].field_block_imagen?.uri?.url)}
                                     width={0}
                                     height={0}
                                     sizes="100vw"
-                                    alt={brand?.[0]?.field_block_imagen?.resourceIdObjMeta?.alt}
+                                    alt={logo?.[0]?.field_block_imagen?.resourceIdObjMeta?.alt}
                                 />
                             )}
 
