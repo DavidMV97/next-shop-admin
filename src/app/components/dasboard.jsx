@@ -7,8 +7,7 @@ export default async function Dasboard() {
   const { hola } = useThemeContext();
 
 
-  const data = await getData();
-  console.log('data', data);
+  
 
   return (
     <div>Dasboard</div>
